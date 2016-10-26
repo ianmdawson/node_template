@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ "`git rev-parse --show-toplevel`" != "$PWD" ]; then
+    echo "Invoke from repo root: ./scripts/$0"
+    exit
+fi
+
+find . -type f -name "*.js" ! -path "./node_modules/*" ! -path "./public/*" | xargs node ./node_modules/eslint/bin/eslint.js
