@@ -1,14 +1,12 @@
 // app/routes.js
-'use strict';
+'use strict'
 
-var moment = require('moment');
-var Promise = require('bluebird');
-var join = Promise.join;
+var moment = require('moment')
+var Promise = require('bluebird')
+var join = Promise.join
 
 module.exports = function(app) {
-
   app.get('/', function(req, res) {
-    res.render('index', {});
-  });
-
+    res.render('index', {})
+  })
 }
