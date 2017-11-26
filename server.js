@@ -1,6 +1,6 @@
 'use strict'
 
-var app = require('./app.js')
+var app = require('./built/app.js')
 
 var port = process.env.PORT || 5000 // process.env.PORT lets the port be set by Heroku
 

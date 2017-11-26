@@ -1,0 +1,13 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "quotemark": {
+      "severity": "warning",
+      "options": [
+        true,
+        "single",
+        "jsx-double"
+      ]
+    }
+  }
+}

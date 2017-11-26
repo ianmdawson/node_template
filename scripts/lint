@@ -5,4 +5,6 @@ if [ "`git rev-parse --show-toplevel`" != "$PWD" ]; then
     exit
 fi
 
-find . -type f -name "*.js" ! -path "./node_modules/*" ! -path "./public/*" | xargs node ./node_modules/eslint/bin/eslint.js
+find . -type f -name "*.js" ! -path "./node_modules/*" ! -path "./public/*" ! -path "./built/*" | xargs node ./node_modules/eslint/bin/eslint.js
+
+./node_modules/tslint/bin/tslint --config "tslint.json" --project tsconfig.json
