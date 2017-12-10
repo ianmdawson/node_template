@@ -1,8 +1,8 @@
-import express = require('express');
+import * as express from 'express';
 import morgan = require('morgan');
 import serveFavicon = require('serve-favicon');
 
-import routes = require('../app/routes.js');
+import * as routes from './routes';
 
 const app = express();
 
