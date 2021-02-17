@@ -3,6 +3,7 @@
 var express = require('express')
 var favicon = require('serve-favicon')
 var morgan = require('morgan')
+var path = require('path');
 
 var app = express()
 
@@ -10,10 +11,12 @@ var app = express()
 if ((app.get('env') !== 'production') && (app.get('env') !== 'test')) {
   app.set('env', 'development')
 }
+
+// config holds test, dev, and prod configurations
 var config = require('./config/config.json')[app.get('env')]
 
 app.set('view engine', 'ejs')
-app.use(express.static(__dirname.join('/public')))
+app.use(express.static(path.join('/public')))
 app.use(favicon('public/images/favicon.ico'))
 // log every request
 app.use(morgan('dev'))
@@ -36,6 +39,6 @@ if (app.get('env') === 'production') {
 }
 
 // routes
-require('./app/routes.js')(app) // load our routes and pass in our app and fully configured passport
+require('./app/routes.js')(app) // load our routes and pass in our app
 
 module.exports = app
