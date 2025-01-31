@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ianmdawson/node_template#readme",
   "dependencies": {
-    "ejs": "^2.5.1",
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "morgan": "^1.7.0",
     "serve-favicon": "^2.3.0"
